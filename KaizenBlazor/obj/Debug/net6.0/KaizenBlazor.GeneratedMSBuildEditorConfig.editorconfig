@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = KaizenBlazor
+build_property.RootNamespace = KaizenBlazor
+build_property.ProjectDir = D:\Kaizen Task\KaizenBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Kaizen Task\KaizenBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Kaizen Task/KaizenBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/ChangePasword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhbmdlUGFzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/EditUser.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFVzZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/EditWarehouse.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFdhcmVob3VzZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Items.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSXRlbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Log.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/NewWarehouse.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3V2FyZWhvdXNlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/TopItems.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVG9wSXRlbXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/Warehouses.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FyZWhvdXNlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Pages/WarehouseStatus.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV2FyZWhvdXNlU3RhdHVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Kaizen Task/KaizenBlazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-u3lb5cvct9
+
+[D:/Kaizen Task/KaizenBlazor/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-sbd48pyl43

@@ -1,0 +1,92 @@
+﻿@page "/TopItems"
+@using System.Text.Json;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Top Items</PageTitle>
+
+<h1>Top Items</h1>
+
+
+@if (Items.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p>The top 10 items per available quantity</p>
+
+    <br />
+    <button class="btn btn-primary"  @onclick="() => GetItems(0)">High</button>
+    <button class="btn btn-primary"  @onclick="() =>  GetItems(1)">Low</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Items)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name </td>
+                    <td>@item.Qty</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+
+    private List<Item> Items = new List<Item>();
+    string jwtToken;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+            var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+            jwtToken = UserObject.GetProperty("token").GetString();
+
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+
+            ItemDTO respons = await Http.GetFromJsonAsync<ItemDTO>("api/admin/Items/Get?page=1&pageSize=10&Asc=1");
+
+            if(respons != null)
+            {
+                Items = respons.Items;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+
+    }
+    private async Task GetItems(int flag)
+    {
+        try
+        {
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            ItemDTO respons = await Http.GetFromJsonAsync<ItemDTO>("api/admin/Items/Get?page=1&pageSize=10&Asc="+flag);
+
+            if (respons != null)
+            {
+                Items = respons.Items;
+            }
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+
+    }
+
+
+}
+

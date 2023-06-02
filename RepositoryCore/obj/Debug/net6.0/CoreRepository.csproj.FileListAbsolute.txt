@@ -1,0 +1,48 @@
+D:\kaizen\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.deps.json
+D:\kaizen\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.AssemblyReference.cache
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfoInputs.cache
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfo.cs
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.CoreCompileInputs.cache
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\refint\CoreRepository.dll
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\RepositoryCore\obj\Debug\net6.0\ref\CoreRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.deps.json
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.pdb
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.AssemblyReference.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfoInputs.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfo.cs
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.CoreCompileInputs.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\refint\CoreRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.pdb
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\ref\CoreRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.deps.json
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.AssemblyReference.cache
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfoInputs.cache
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfo.cs
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.CoreCompileInputs.cache
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\refint\CoreRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\Kaizen Task\RepositoryCore\obj\Debug\net6.0\ref\CoreRepository.dll
+D:\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.deps.json
+D:\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.dll
+D:\Kaizen Task\RepositoryCore\bin\Debug\net6.0\CoreRepository.pdb
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.AssemblyReference.cache
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfoInputs.cache
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.AssemblyInfo.cs
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.csproj.CoreCompileInputs.cache
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.dll
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\refint\CoreRepository.dll
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\CoreRepository.pdb
+D:\Kaizen Task\RepositoryCore\obj\Debug\net6.0\ref\CoreRepository.dll

@@ -1,0 +1,108 @@
+﻿@page "/ChangePassword/{userId}"
+@using System.Text.Json;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Change Password</PageTitle>
+
+<h1>Change Password</h1>
+
+
+<form @onsubmit="changePassword">
+    <div class="form-group">
+       
+        <input type="hidden" id="userId" @bind="userId" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="newPass">New Password</label>
+        <input type="password" id="newPass" @bind="newPass" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="confPass">Confirm Password</label>
+        <input type="password" id="confPass" @bind="confPass" class="form-control" required />
+    </div>
+    <br />
+    @if (!string.IsNullOrWhiteSpace(@notificationMessage))
+    {
+        <div class="notification  @(notificationType)">
+            <button class="delete" @onclick="CloseNotification">x</button>
+            <p class="@alertColor">  @notificationMessage </p>
+        </div>
+        <br />
+    }
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+@code {
+    [Parameter]
+    public string? userId { get; set; }
+
+    //Notification
+    private string notificationType = "";
+    private string notificationMessage = "";
+    private string alertColor = "";
+
+    public void ShowNotification(string type, string message, string alert)
+    {
+        notificationType = type;
+        notificationMessage = message;
+        alertColor = alert;
+    }
+
+    private void CloseNotification()
+    {
+        notificationType = "";
+        notificationMessage = "";
+    }
+
+
+
+
+    //OnInitializedAsync
+    private string newPass;
+    private string confPass;
+    private string jwtToken;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+        var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+        jwtToken = UserObject.GetProperty("token").GetString();
+    
+
+    }
+
+    //changePassword
+    private async Task changePassword()
+    {
+        // validation: Check if the passwords match
+        if (newPass != confPass)
+        {
+            // Passwords don't match, display an error message
+            ShowNotification("error", "Passwords do not match", "alert-danger");
+            return;
+        }
+
+        //request
+        var Model = new { Id = userId, Password = newPass };
+        Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+        var response= await Http.PostAsJsonAsync("api/auth/ChangePassword", Model);
+
+
+        if (response.IsSuccessStatusCode)
+        {
+            ShowNotification("success", "Password changed successfully!", "alert-info");
+
+        }
+        else
+        {
+            ShowNotification("error", "error", "alert-danger");
+        }
+    }
+
+
+
+}
+

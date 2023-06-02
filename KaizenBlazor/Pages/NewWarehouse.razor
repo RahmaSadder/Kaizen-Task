@@ -1,0 +1,118 @@
+﻿@page "/NewWarehouse"
+@using System.Text.Json;
+@using CoreRepository.Enum;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+<PageTitle>New Warehouse</PageTitle>
+
+<h1>New Warehouse</h1>
+
+
+<form @onsubmit="Add">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-control" @bind="warehouse.Name" required />
+        <div class="invalid-feedback" style="display: block;" if="@IsNameDuplicate">Name must be unique.</div>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" class="form-control" @bind="warehouse.Address" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" class="form-control" @bind="warehouse.City" required />
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" class="form-control" @bind="warehouse.Country" required>
+            @foreach (var country in Enum.GetValues(typeof(Country)))
+            {
+                <option value="@country">@country</option>
+            }
+        </select>
+    </div>
+    <br />
+    @if (!string.IsNullOrWhiteSpace(@notificationMessage))
+    {
+        <div class="notification  @(notificationType)">
+            <button class="delete" @onclick="CloseNotification">x</button>
+            <p class="@alertColor">  @notificationMessage </p>
+        </div>
+        <br />
+    }
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+
+
+@code {
+    public bool IsNameDuplicate { get; set; }
+
+    //Notification
+    private string notificationType = "";
+    private string notificationMessage = "";
+    private string alertColor = "";
+
+    public void ShowNotification(string type, string message, string alert)
+    {
+        notificationType = type;
+        notificationMessage = message;
+        alertColor = alert;
+    }
+
+    private void CloseNotification()
+    {
+        notificationType = "";
+        notificationMessage = "";
+    }
+
+
+
+    //OnInitializedAsync
+
+    private string jwtToken;
+    Warehouse? warehouse = new Warehouse();
+    protected override async Task OnInitializedAsync()
+    {
+        string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+        var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+        jwtToken = UserObject.GetProperty("token").GetString();
+    }
+
+
+    //Edit
+    private async Task Add()
+    {
+        try
+        {
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            var response = await Http.PostAsJsonAsync("api/warehouse/AddWarehouse", warehouse);
+
+            if (response.IsSuccessStatusCode)
+            {
+                ShowNotification("success", "Added successfully!", "alert-info");
+                string jsonString = await response.Content.ReadAsStringAsync();
+                if (!string.IsNullOrEmpty(jsonString))
+                {
+                    var obj= JsonSerializer.Deserialize<JsonElement>(jsonString);
+                    string warehouseId = obj.GetProperty("id").GetString();
+                    Navigation.NavigateTo($"EditWarehouse/{warehouseId}");
+
+                }
+            }
+            else
+            {
+                ShowNotification("error", "error", "alert-danger");
+            }
+        }
+        catch (Exception ex)
+        {
+            ShowNotification("error", ex.Message.ToString(), "alert-danger");
+        }
+    }
+
+
+
+}
+

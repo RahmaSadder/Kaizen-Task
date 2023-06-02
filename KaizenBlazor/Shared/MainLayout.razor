@@ -1,0 +1,54 @@
+﻿@using System.Text.Json;
+@inherits LayoutComponentBase
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+@inject NavigationManager navigationManager
+<div class="page">
+    <div class="sidebar">
+        <NavMenu Role="@Role" />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">@UserName</a>
+            <button class="btn btn-outline-primary" @onclick="Logout">Logout</button>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+
+
+
+    </main>
+</div>
+@code {
+    private string jsonString, jwtToken, Role, UserName;
+    private async Task Logout()
+    {
+        await JSRuntime.InvokeVoidAsync("localStorage.removeItem", "user");
+        navigationManager.NavigateTo("/Login");
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+            var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+             jwtToken = UserObject.GetProperty("token").GetString();
+             Role = UserObject.GetProperty("role").GetString();
+            UserName = UserObject.GetProperty("username").GetString();
+            if (string.IsNullOrWhiteSpace(jwtToken))
+            {
+                Navigation.NavigateTo("/login");
+            }
+        }
+        catch (Exception ex)
+        {
+            Navigation.NavigateTo("/login");
+        }
+
+      
+    }
+}

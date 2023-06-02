@@ -1,0 +1,151 @@
+﻿@page "/Warehouses"
+@using System.Text.Json;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+
+<PageTitle>Warehouses</PageTitle>
+
+<h1>Warehouses</h1>
+
+
+@if (warehouses.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <button class="btn btn-outline-primary" @onclick="Add">Add New</button>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in warehouses)
+            {
+                <tr>
+                   
+                    <td>@item.Name </td>
+                    <td>@item.Address</td>
+                    <td>@item.City</td>
+                    <td>@item.Country</td>
+                    <td>
+                   
+                        <button class="btn btn-primary" @onclick="() => Items(item.Id)">Items</button>
+                        <button class="btn btn-danger" @onclick=" () => Delete(item.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div>
+        @if (currentPage > 1)
+        {
+            <button @onclick="() => ChangePage(--currentPage)">Previous</button>
+        }
+        @for (int i = 1; i <= count; i++)
+        {
+            int page = i;
+            <button @onclick="() => ChangePage(page)">@i</button>
+
+        }
+        @{
+            if (currentPage < count)
+            {
+                <button @onclick="() => ChangePage(++currentPage)">Next</button>
+            }
+        }
+
+    </div>
+}
+
+@code {
+    private int currentPage = 1;
+    private int itemsPerPage = 10;
+    private List<Warehouse> warehouses = new List<Warehouse>();
+    string jwtToken;
+    int count = 0;
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+            var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+            jwtToken = UserObject.GetProperty("token").GetString();
+
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            WarehouseDTO respons = await Http.GetFromJsonAsync<WarehouseDTO>($"api/warehouse/GetWarehouses?page=1&pageSize={itemsPerPage}");
+
+            if (respons != null)
+            {
+                warehouses = respons.warehouses;
+                if (respons.count >0)
+                    count = (int)(Math.Ceiling((double)respons.count/itemsPerPage));
+            }
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+
+    }
+    private void Add() => Navigation.NavigateTo("/NewWarehouse");
+    private void Items(Int64 id) => Navigation.NavigateTo($"/Items/{id.ToString()}");
+
+    private async Task Delete(Int64 id)
+    {
+
+        try
+        {
+
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            await Http.PostAsync($"api/warehouse/DeleteWarehouse?warehouseId={id}", null);
+
+            var deletedItem = warehouses.FirstOrDefault(item => item.Id == id);
+            if (deletedItem != null)
+            {
+                warehouses.Remove(deletedItem);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+    }
+
+
+    private async Task ChangePage(int p)
+    {
+
+        try
+        {
+            currentPage = p;
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            WarehouseDTO respons = await Http.GetFromJsonAsync<WarehouseDTO>($"api/warehouse/GetWarehouses?page={p}&pageSize={itemsPerPage}");
+
+            if (respons != null)
+            {
+                warehouses = respons.warehouses;
+            }
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+    }
+
+
+
+}
+

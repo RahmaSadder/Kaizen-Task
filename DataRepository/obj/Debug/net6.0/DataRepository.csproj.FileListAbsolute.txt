@@ -1,0 +1,68 @@
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.deps.json
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.runtimeconfig.json
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.dll
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.pdb
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.AssemblyReference.cache
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfoInputs.cache
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfo.cs
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CoreCompileInputs.cache
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CopyComplete
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.dll
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\refint\DataRepository.dll
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.pdb
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.genruntimeconfig.cache
+D:\kaizen\Kaizen Task\DataRepository\obj\Debug\net6.0\ref\DataRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.deps.json
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.runtimeconfig.json
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.pdb
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.pdb
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.AssemblyReference.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfoInputs.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfo.cs
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CoreCompileInputs.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CopyComplete
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\refint\DataRepository.dll
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.pdb
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.genruntimeconfig.cache
+C:\Users\ealda\Desktop\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\ref\DataRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.deps.json
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.runtimeconfig.json
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.pdb
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.pdb
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.AssemblyReference.cache
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfoInputs.cache
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfo.cs
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CoreCompileInputs.cache
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CopyComplete
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\refint\DataRepository.dll
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.pdb
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.genruntimeconfig.cache
+D:\kaizen\Kaizen Task\Kaizen Task\DataRepository\obj\Debug\net6.0\ref\DataRepository.dll
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.dll
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\refint\DataRepository.dll
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.pdb
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.deps.json
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.runtimeconfig.json
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.dll
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\DataRepository.pdb
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.dll
+D:\Kaizen Task\DataRepository\bin\Debug\net6.0\CoreRepository.pdb
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.AssemblyReference.cache
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfoInputs.cache
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.AssemblyInfo.cs
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CoreCompileInputs.cache
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.csproj.CopyComplete
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\DataRepository.genruntimeconfig.cache
+D:\Kaizen Task\DataRepository\obj\Debug\net6.0\ref\DataRepository.dll

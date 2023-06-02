@@ -1,0 +1,44 @@
+﻿@page "/Log"
+@using System.Text.Json;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+@inject NavigationManager Navigation
+
+<PageTitle>Log</PageTitle>
+
+<h1>Log</h1>
+<br />
+<div>
+    @foreach (var item in items)
+    {
+        <p>
+            @item
+        </p>
+    }
+   
+</div>
+
+@code {
+    private List<string> items = new List<string>();
+    string jwtToken;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+            var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+            jwtToken = UserObject.GetProperty("token").GetString();
+
+
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            items = await Http.GetFromJsonAsync<List<string>>($"api/admin/ReadLogs");
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+
+    }
+}

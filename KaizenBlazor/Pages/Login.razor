@@ -1,0 +1,79 @@
+﻿@page "/Login"
+
+@using System.Net.Http;
+@using System.Text.Json;
+
+@inject HttpClient httpClient
+@inject IJSRuntime JSRuntime
+
+@inject NavigationManager navigationManager
+@layout Header
+<h3>Login</h3>
+
+@if (error)
+{
+    <p class="text-danger">@errorMessage</p>
+}
+
+<div class="form-group">
+    <label for="username">Username:</label>
+    <input id="username" class="form-control" type="text" @bind="username" />
+</div>
+
+<div class="form-group">
+    <label for="password">Password:</label>
+    <input id="password" class="form-control" type="password" @bind="password" />
+</div>
+
+<button class="btn btn-primary" @onclick="LoginAction">Login</button>
+
+@code {
+    private string username;
+    private string password;
+    private bool error;
+    private string errorMessage;
+
+    private async Task LoginAction()
+    {
+        try
+        {
+            var loginModel = new { username = username, password = password };
+            
+            var response = await httpClient.PostAsJsonAsync("api/auth/Login", loginModel);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string jsonString = await response.Content.ReadAsStringAsync();
+
+                if (!string.IsNullOrEmpty(jsonString))
+                {
+                   
+                    await SaveUserToStorage(jsonString);
+                }
+                // Redirect to the welcome page
+                navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                error = true;
+                errorMessage = "Invalid username or password.";
+            }
+        }
+        catch (Exception ex)
+        {
+            error = true;
+            errorMessage = "An error occurred: " + ex.Message;
+        }
+    }
+    private async Task SaveUserToStorage(string jsonString)
+    {
+        try
+        {
+            await JSRuntime.InvokeVoidAsync("localStorage.setItem", "user", jsonString);
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
+}

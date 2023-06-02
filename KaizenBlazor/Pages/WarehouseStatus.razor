@@ -1,0 +1,66 @@
+﻿@page "/warehouseStatus"
+@using System.Text.Json;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Warehouse Status</PageTitle>
+
+<h1>Warehouse Status</h1>
+
+
+@if (WarehousStatistics.Count == 0)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in WarehousStatistics)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.warehouse</td>
+                    <td>@item.count</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   
+
+}
+
+@code {
+
+    private List<WarehousStatistics> WarehousStatistics = new List<WarehousStatistics>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            string jsonString = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "user");
+            var UserObject = JsonSerializer.Deserialize<JsonElement>(jsonString);
+            string jwtToken = UserObject.GetProperty("token").GetString();
+            Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+
+            WarehousStatistics = await Http.GetFromJsonAsync<List<WarehousStatistics>>("api/admin/Warehouses/Get?page=1&pageSize=10");
+           
+
+        }
+        catch (Exception ex)
+        {
+            var error = ex.Message;
+        }
+
+    }
+
+
+}
+

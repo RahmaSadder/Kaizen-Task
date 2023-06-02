@@ -1,0 +1,96 @@
+2023-05-31 19:45:21.176 +03:00  INF  Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.16' with options: MigrationsAssembly=DataRepository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-05-31 19:45:21.558 +03:00  INF  Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Role" AS "r"
+2023-05-31 19:45:21.573 +03:00  INF  Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "User" AS "u"
+2023-05-31 19:45:21.688 +03:00  INF  User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-31 19:45:21.873 +03:00  INF  Now listening on: https://localhost:7187
+2023-05-31 19:45:21.873 +03:00  INF  Now listening on: http://localhost:5055
+2023-05-31 19:45:21.876 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-05-31 19:45:21.876 +03:00  INF  Hosting environment: Development
+2023-05-31 19:45:21.876 +03:00  INF  Content root path: D:\kaizen\Kaizen Task\HappyCompany-API\
+2023-05-31 19:45:22.780 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/swagger/index.html - -
+2023-05-31 19:45:23.353 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - -
+2023-05-31 19:45:23.368 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 13.4350ms
+2023-05-31 19:45:23.368 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/swagger/index.html - - - 200 - text/html;charset=utf-8 593.8319ms
+2023-05-31 19:45:23.410 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - -
+2023-05-31 19:45:23.475 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.9363ms
+2023-05-31 19:45:23.604 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - -
+2023-05-31 19:45:23.892 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 287.5397ms
+2023-05-31 19:45:25.222 +03:00  INF  Request starting HTTP/1.1 GET https://localhost:7187/api/warehouse/GetWarehouses?page=1&pageSize=10 - -
+2023-05-31 19:45:25.591 +03:00  INF  Executing endpoint 'HappyCompany_API.Controllers.WarehouseController.GetWarehouses (HappyCompany-API)'
+2023-05-31 19:45:25.616 +03:00  INF  Route matched with {action = "GetWarehouses", controller = "Warehouse"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetWarehouses(Int32, Int32) on controller HappyCompany_API.Controllers.WarehouseController (HappyCompany-API).
+2023-05-31 19:45:29.708 +03:00  INF   GetWarehouses .................
+2023-05-31 19:45:29.746 +03:00  INF  Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.16' with options: MigrationsAssembly=DataRepository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-05-31 19:45:29.755 +03:00  INF  Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Warehouse" AS "w"
+2023-05-31 19:45:29.783 +03:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-05-31 19:45:29.784 +03:00  WRN  The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2023-05-31 19:45:29.853 +03:00  INF  Executed DbCommand (6ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "w"."Id", "w"."Address", "w"."City", "w"."Country", "w"."Name"
+FROM "Warehouse" AS "w"
+LIMIT @__p_1 OFFSET @__p_0
+2023-05-31 19:45:29.969 +03:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType7`2[[System.Collections.Generic.List`1[[CoreRepository.Models.Warehouse, CoreRepository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-05-31 19:45:29.989 +03:00  INF  Executed action HappyCompany_API.Controllers.WarehouseController.GetWarehouses (HappyCompany-API) in 4367.7129ms
+2023-05-31 19:45:29.990 +03:00  INF  Executed endpoint 'HappyCompany_API.Controllers.WarehouseController.GetWarehouses (HappyCompany-API)'
+2023-05-31 19:45:29.992 +03:00  INF  Request finished HTTP/1.1 GET https://localhost:7187/api/warehouse/GetWarehouses?page=1&pageSize=10 - - - 200 - application/json;+charset=utf-8 4769.9551ms
+2023-05-31 19:50:30.244 +03:00  INF  Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.16' with options: MigrationsAssembly=DataRepository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-05-31 19:50:30.651 +03:00  INF  Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Role" AS "r"
+2023-05-31 19:50:30.666 +03:00  INF  Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "User" AS "u"
+2023-05-31 19:50:30.797 +03:00  INF  User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-31 19:50:31.020 +03:00  INF  Now listening on: https://localhost:7187
+2023-05-31 19:50:31.020 +03:00  INF  Now listening on: http://localhost:5055
+2023-05-31 19:50:31.023 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-05-31 19:50:31.024 +03:00  INF  Hosting environment: Development
+2023-05-31 19:50:31.024 +03:00  INF  Content root path: D:\kaizen\Kaizen Task\HappyCompany-API\
+2023-05-31 19:50:31.868 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/swagger/index.html - -
+2023-05-31 19:50:32.283 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - -
+2023-05-31 19:50:32.288 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/swagger/index.html - - - 200 - text/html;charset=utf-8 426.1840ms
+2023-05-31 19:50:32.289 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - - - 200 12002 application/javascript;+charset=utf-8 5.1827ms
+2023-05-31 19:50:32.317 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - -
+2023-05-31 19:50:32.368 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.7108ms
+2023-05-31 19:50:32.472 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - -
+2023-05-31 19:50:32.631 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.3339ms
+2023-05-31 19:51:44.538 +03:00  INF  Request starting HTTP/2 POST https://localhost:7187/api/auth/Login application/json 70
+2023-05-31 19:51:44.660 +03:00  INF  No CORS policy found for the specified request.
+2023-05-31 19:51:44.665 +03:00  INF  Executing endpoint 'HappyCompany_API.Controllers.AuthController.Login (HappyCompany-API)'
+2023-05-31 19:51:44.692 +03:00  INF  Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(CoreRepository.Models.UserLogin) on controller HappyCompany_API.Controllers.AuthController (HappyCompany-API).
+2023-05-31 19:51:44.765 +03:00  INF  Entity Framework Core 6.0.16 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.16' with options: MigrationsAssembly=DataRepository, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2023-05-31 19:51:44.935 +03:00  INF  Executed DbCommand (11ms) [Parameters=[@__user_username_0='?' (Size = 24), @__user_password_1='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."Active", "u"."Email", "u"."FullName", "u"."Password", "u"."Role"
+FROM "User" AS "u"
+WHERE ("u"."Email" = @__user_username_0) AND ("u"."Password" = @__user_password_1)
+LIMIT 1
+2023-05-31 19:51:45.179 +03:00  INF  Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-05-31 19:51:45.186 +03:00  INF  Executed action HappyCompany_API.Controllers.AuthController.Login (HappyCompany-API) in 490.3135ms
+2023-05-31 19:51:45.187 +03:00  INF  Executed endpoint 'HappyCompany_API.Controllers.AuthController.Login (HappyCompany-API)'
+2023-05-31 19:51:45.192 +03:00  INF  Request finished HTTP/2 POST https://localhost:7187/api/auth/Login application/json 70 - 200 - application/json;+charset=utf-8 653.6510ms
+2023-05-31 19:52:49.190 +03:00  INF  Request starting HTTP/2 GET https://localhost:7187/api/admin/ReadLogs - -
+2023-05-31 19:52:49.197 +03:00  INF  Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-05-31 19:52:49.205 +03:00  INF  AuthenticationScheme: Bearer was challenged.
+2023-05-31 19:52:49.206 +03:00  INF  Request finished HTTP/2 GET https://localhost:7187/api/admin/ReadLogs - - - 401 0 - 16.8261ms
+2023-05-31 19:52:57.223 +03:00  INF  Request starting HTTP/1.1 GET https://localhost:7187/api/admin/ReadLogs - -
+2023-05-31 19:52:57.355 +03:00  INF  Executing endpoint 'HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API)'
+2023-05-31 19:52:57.357 +03:00  INF  Route matched with {action = "ReadLogs", controller = "AdminDashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReadLogs() on controller HappyCompany_API.Controllers.AdminDashboardController (HappyCompany-API).
+2023-05-31 19:53:29.947 +03:00  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-05-31 19:53:29.953 +03:00  INF  Executed action HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API) in 32596.2005ms
+2023-05-31 19:53:29.953 +03:00  INF  Executed endpoint 'HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API)'
+2023-05-31 19:53:29.953 +03:00  INF  Request finished HTTP/1.1 GET https://localhost:7187/api/admin/ReadLogs - - - 400 - application/problem+json;+charset=utf-8 32729.9358ms
+2023-05-31 19:53:44.612 +03:00  INF  Request starting HTTP/1.1 GET https://localhost:7187/api/admin/ReadLogs - -
+2023-05-31 19:53:44.616 +03:00  INF  Executing endpoint 'HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API)'
+2023-05-31 19:53:44.617 +03:00  INF  Route matched with {action = "ReadLogs", controller = "AdminDashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReadLogs() on controller HappyCompany_API.Controllers.AdminDashboardController (HappyCompany-API).
+2023-05-31 19:53:46.250 +03:00  INF  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-05-31 19:53:46.251 +03:00  INF  Executed action HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API) in 1633.2675ms
+2023-05-31 19:53:46.251 +03:00  INF  Executed endpoint 'HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API)'
+2023-05-31 19:53:46.251 +03:00  INF  Request finished HTTP/1.1 GET https://localhost:7187/api/admin/ReadLogs - - - 400 - application/problem+json;+charset=utf-8 1639.1089ms
+2023-05-31 19:53:55.079 +03:00  INF  Request starting HTTP/1.1 GET https://localhost:7187/api/admin/ReadLogs - -
+2023-05-31 19:53:55.083 +03:00  INF  Executing endpoint 'HappyCompany_API.Controllers.AdminDashboardController.ReadLogs (HappyCompany-API)'
+2023-05-31 19:53:55.083 +03:00  INF  Route matched with {action = "ReadLogs", controller = "AdminDashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ReadLogs() on controller HappyCompany_API.Controllers.AdminDashboardController (HappyCompany-API).
